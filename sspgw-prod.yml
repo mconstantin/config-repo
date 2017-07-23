@@ -1,0 +1,23 @@
+# ===================================================================
+# Application specific properties
+# Add your own application properties here, see the ApplicationProperties class
+# to have type-safe configuration, like in the JHipsterProperties above
+#
+# More documentation is available at:
+# https://jhipster.github.io/common-application-properties/
+# ===================================================================
+
+application:
+  security:
+    authenticator:
+      className: com.sharplabs.ssp.gateway.security.PingAuthenticator
+      sts:
+        startSsoClassName: com.sharplabs.ssp.gateway.security.PingStartSso
+        serverUrl: https://63.131.229.9:9031
+        startSsoUrl: /sp/startSSO.ping
+        pickupPath: /ext/ref/pickup
+        idpId: SSP-DEMO-SP
+        spInstanceId: sspSpRefIdAdapter
+        apiUsername: apiusername
+        apiPassword: apiPassword
+        claims: subject, mail, displayName, givenName, sn, countryCode, codePage, sAMAccountName
